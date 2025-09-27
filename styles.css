@@ -1,0 +1,15 @@
+html {
+    font-size: 1.2em;
+}
+
+* {
+    font-size: inherit;
+}
+
+body {
+    display: flex;
+}
+
+textarea {
+    height: 90vh;
+}
