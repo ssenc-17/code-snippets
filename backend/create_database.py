@@ -18,10 +18,12 @@ with open("movies.csv", "r", encoding="UTF-8") as file:
         # row[6] = row[6].replace("\"\"", "\\\"").replace("'", "")
         values = str(row)[1:-1]
         query = f"insert into films values({values})"
-        print(query)
+        # print(query)
         cursor.execute(query)
         connection.commit()
 
+
+cursor.execute("create table lists(id text, list_title text, film_titles text);")
 
 connection.close()
 print("Created database.")
