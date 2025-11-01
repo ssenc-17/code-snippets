@@ -13,7 +13,7 @@ with open("IMDB.csv", "r", encoding="UTF-8") as file:
     next(reader)
 
     for row in reader:
-        row.pop(7)
+        row.pop(9)
         row[6] = row[6].replace("\"\"", "\\\"").replace("'", "")
         values = str(row)[1:-1]
         query = f"insert into films values({values})"
